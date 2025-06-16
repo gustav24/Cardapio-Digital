@@ -1,51 +1,147 @@
 # Cardápio Digital
 
-Um sistema de cardápio digital com frontend em HTML/JavaScript e backend em PHP.
+Um sistema completo de cardápio digital com frontend moderno e backend em PHP, permitindo que restaurantes gerenciem seus produtos e pedidos de forma eficiente.
 
-## Estrutura do Projeto
+## 🚀 Funcionalidades
+
+### Frontend
+- Página inicial com destaques e categorias
+- Cardápio digital com filtros por categoria
+- Carrinho de compras
+- Sistema de pedidos online
+- Página "Sobre" com informações do restaurante
+- Página de contato com formulário e mapa
+
+### Backend
+- Painel administrativo para gerenciamento de produtos
+- Sistema de gerenciamento de pedidos
+- API RESTful para integração com o frontend
+- Banco de dados MySQL para armazenamento de dados
+
+## 🛠️ Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- PHP 7.4+
+- MySQL
+- Font Awesome (ícones)
+- Google Maps API (opcional)
+
+## 📋 Pré-requisitos
+
+- Servidor web (Apache/Nginx)
+- PHP 7.4 ou superior
+- MySQL 5.7 ou superior
+- Extensões PHP necessárias:
+  - PDO
+  - PDO_MySQL
+  - JSON
+
+## 🔧 Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/cardapio-digital.git
+```
+
+2. Configure o banco de dados:
+   - Crie um banco de dados MySQL
+   - Execute o script `backend/database.sql`
+   - Configure as credenciais em `backend/config/Database.php`
+
+3. Configure o servidor web:
+   - Aponte o DocumentRoot para a pasta do projeto
+   - Certifique-se de que o mod_rewrite está habilitado (Apache)
+   - Configure as permissões corretas nas pastas
+
+4. Ajuste as configurações:
+   - Edite as informações do restaurante no frontend
+   - Configure as credenciais do banco de dados
+   - Ajuste as URLs das imagens conforme necessário
+
+## 📁 Estrutura do Projeto
 
 ```
 cardapio-digital/
-├── public/                 # Arquivos públicos
-│   ├── assets/            # Recursos estáticos
-│   │   ├── css/          # Arquivos CSS
-│   │   ├── js/           # Arquivos JavaScript
-│   │   └── images/       # Imagens
-│   ├── views/            # Templates PHP
-│   └── index.html        # Página principal
-├── src/                   # Código fonte PHP
-│   ├── config/           # Arquivos de configuração
-│   ├── controllers/      # Controladores
-│   ├── models/           # Modelos
-│   └── routes/           # Rotas
-└── index.php             # Ponto de entrada da aplicação
+├── frontend/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── images/
+│   ├── index.html
+│   ├── menu.html
+│   ├── cart.html
+│   ├── about.html
+│   └── contact.html
+│
+└── backend/
+    ├── api/
+    │   └── create_order.php
+    ├── config/
+    │   └── Database.php
+    ├── models/
+    │   ├── Product.php
+    │   └── Order.php
+    ├── admin/
+    │   ├── products.php
+    │   └── orders.php
+    └── database.sql
 ```
 
-## Requisitos
+## 💻 Uso
 
-- PHP 7.4 ou superior
-- Servidor web (Apache/Nginx)
-- MySQL 5.7 ou superior
+### Frontend
+1. Acesse a página inicial (`index.html`)
+2. Navegue pelo cardápio
+3. Adicione itens ao carrinho
+4. Faça o pedido
 
-## Configuração
+### Backend (Admin)
+1. Acesse o painel de produtos (`backend/admin/products.php`)
+   - Adicione novos produtos
+   - Edite produtos existentes
+   - Remova produtos
 
-1. Clone o repositório
-2. Configure seu servidor web para apontar para o diretório `public/`
-3. Copie o arquivo `src/config/config.php` para `src/config/config.local.php` e ajuste as configurações
-4. Importe o banco de dados usando o arquivo `database/schema.sql`
+2. Acesse o painel de pedidos (`backend/admin/orders.php`)
+   - Visualize pedidos
+   - Atualize status dos pedidos
+   - Gerencie entregas
 
-## Desenvolvimento
+## 🔒 Segurança
 
-Para iniciar o desenvolvimento:
+- Todas as entradas de dados são sanitizadas
+- Proteção contra SQL Injection usando PDO
+- Validação de dados no frontend e backend
+- CORS configurado adequadamente
 
-1. Configure seu ambiente de desenvolvimento
-2. Execute o servidor web local
-3. Acesse `http://localhost/cardapio-digital`
+## 🤝 Contribuindo
 
-## Contribuição
+1. Faça um Fork do projeto
+2. Crie uma Branch para sua Feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a Branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request 
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## ✨ Recursos Adicionais
+
+- Design responsivo
+- Interface moderna e intuitiva
+- Sistema de carrinho com localStorage
+- Filtros de produtos por categoria
+- Gestão de pedidos em tempo real
+- Suporte a múltiplos produtos e categorias
+
+## 📞 Suporte
+
+Para suporte, envie um email para seu-email@exemplo.com ou abra uma issue no GitHub.
+
+## 🙏 Agradecimentos
+
+- Font Awesome pelos ícones
+- Comunidade PHP
+- Todos os contribuidores do projeto 
